@@ -13,6 +13,7 @@ MAX_CHARS = 200
 
 
 def validate(text):
+    """A single line within the character limit, nothing else."""
     assert text and text.strip(), "entry must not be blank"
     assert "\n" not in text and "\r" not in text, "entry must be a single line"
     assert len(text) <= MAX_CHARS, "entry is %d chars, max is %d" % (len(text), MAX_CHARS)
